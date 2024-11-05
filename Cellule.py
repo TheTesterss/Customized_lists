@@ -13,20 +13,20 @@ class Cellule:
     
     # ? Setters
     
-    """ Set cellule's value """
+    """ Sets cellule's value """
     def setValue(self, value):
         self.__value = value
     
-    """ Set the next cellule to still have pointers on it """
+    """ Sets the next cellule to still have pointers on it """
     def setNext(self, next):
         self.__next = next
     
     # ? Getters
     
-    """ Get the current cellule value """
+    """ Returns the current cellule value """
     def getValue(self):
         return self.__value
     
-    """ Get the next cellule that follows this one """
+    """ Returns the next cellule that follows this one """
     def getNext(self):
         return self.__next

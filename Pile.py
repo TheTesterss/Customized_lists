@@ -16,7 +16,7 @@ class Pile:
         self.__length = 0
         self.__start = None
     
-    """ Insert any type of value at the beginning of the list """
+    """ Inserts any type of value at the beginning of the list """
     def Insert(self, value: any):
         cellule = Cellule(value)
         
@@ -28,19 +28,22 @@ class Pile:
         self.__start = cellule
         self.__length += 1
     
-    """ Remove the value at the beginning of the list """
+    """ Removes the value at the beginning of the list """
     def Remove(self):
         assert self.isEmpty() == False, "List empty."
         self.__start = self.__start.getNext()
         self.__length -= 1
     
+    """ Returns the length of the list"""
     def Length(self) -> int:
         return self.__length
     
+    """ Checks if the list is empty or not """
     def isEmpty(self) -> bool:
         return self.__length == 0
         # * Or "return not self.__start"
     
+    """ Prints the list as a python list's format"""
     def Show(self):
         if self.isEmpty():
             return print("[]")
@@ -52,6 +55,7 @@ class Pile:
             v = v.getNext()
         print(f"{v.getValue()}]")
     
+    """ Returns the value at a specific position """
     def At(self, position):
         assert self.isEmpty() == False, "List empty"
         assert self.Length() >= position, "Out of range"
