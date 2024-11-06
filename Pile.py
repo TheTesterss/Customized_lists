@@ -6,8 +6,6 @@
 from Cellule import Cellule
 
 class Pile:
-    __length: int
-    __start: Cellule
     
     # ? CONSTRUCTOR
     
@@ -19,11 +17,7 @@ class Pile:
     """ Inserts any type of value at the beginning of the list """
     def Insert(self, value: any):
         cellule = Cellule(value)
-        
-        if self.isEmpty():
-            cellule.setNext(None)
-        else:
-            cellule.setNext(self.__start)
+        cellule.setNext(self.__start)
         
         self.__start = cellule
         self.__length += 1
