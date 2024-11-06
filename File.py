@@ -6,8 +6,6 @@
 from Cellule import Cellule
 
 class File:
-    __length: int
-    __start: Cellule
     
     # ? CONSTRUCTOR
     
